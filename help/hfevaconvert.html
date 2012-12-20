@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>hfevaconvert</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>hfevaconvert</h1>
+
+<p>Convert between HFEVA values based on a reference table</p>
+
+<h2>Syntax</h2>
+<p><code>newvalue = hfevaconvert(value, convertfrom, convertto)</code>
+
+<h2>Description</h2>
+
+<p>Converts the matrix <code>value</code> between values available in the HFEVA sediment classification system.  The following conversions are possible:</p>
+
+<table border="2" cellpadding="4" cellspacing="0">
+<tr><td><code>convertfrom</code></td><td><code>'typeid', 'label', 'cat', or 'rmz'</code></td></tr> 
+<tr><td><code>convertto</code></td><td><code>'typeid', 'label', 'cat', 'rmz', or 'color'<code></td></tr>
+</table>
+
+<p>If multiple conversions are possible (e.g. going from rmz to cat), only the last value in the table is returned. If <code>convertto</code> is either <code>'label'</code> or <code>'color'</code>, <code>newvalue</code> will be a cell array with the same dimensions as <code>value</code>; otherwise, <code>newvalue</code> will be a numeric array.</p> 
+
+<h2>Examples</h2>
+
+<p>Find the RMZ values associated with three sediment types.</p>
+
+<code>x1 = hfevaconvert({'Rock'; 'Gravel'; 'Sand'}, 'label', 'rmz')
+<br><br>
+x1 =
+<br>&nbsp&nbsp&nbsp -7.0000
+<br>&nbsp&nbsp&nbsp -3.0000
+<br>&nbsp&nbsp&nbsp 1.5000</code>
+
+<p>Note that conversions are not always reversible when converting between properties that do not have a one-to-one ratio:</p>
+
+<code>x2 = hfevaconvert(x1, 'rmz', 'label')
+<br><br>
+x2 = 
+<br>&nbsp&nbsp&nbsp 'Rock'
+<br>&nbsp&nbsp&nbsp 'Pebble'
+<br>&nbsp&nbsp&nbsp 'Medium Sand'</code>
+

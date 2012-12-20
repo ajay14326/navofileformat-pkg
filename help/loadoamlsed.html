@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>loadoamlsed</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>loadoamlsed</h1>
+
+<p>Loads an OAML sediment charter file</p>
+
+<h2>Syntax</h2>
+
+<p><code>Data = loadoamlsed(filename)</code></p>
+
+<h2>Description</h2>
+
+<p><code>Data = loadoamlsed(filename)</code> loads the OAML charter file <code>filename</code> into the m x 1 structure <code>Data</code>.  The output structure is of the same format of that returned by <code>readbinarycharter</code>.  However, the grid is broken into several smaller 200 x 200 element grids (unless it is smaller than this to begin with) and the data values are converted to RMZ values.</p>  
+
+<h2>See Also</h2>
+
+<code><a href="readbinarycharter.html">readbinarycharter</a></code>
