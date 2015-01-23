@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>interpshapefile</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>interpshapefile</h1>
+
+<p>Interpolates values at points based on a shapefile data structure</p>
+
+<h2>Syntax</h2>
+
+<p><code>value = interpshapefile(ShapeStruct, lat, lon, attribute)</code></p>
+
+<h2>Description</h2>
+
+<p><code>value = interpshapefile(ShapeStruct, lat, lon, attribute)</code> determines the <code>attribute</code> value at the given points defined by the matrices <code>lat</code> and <code>lon</code> based on the data in the geographic data structure ShapeStruct (created using the <code>shaperead</code> function).</p>
+
+<p>If the specified attribute holds a numeric scalar, <code>value</code> will be a numeric array; points located outside the polygons will receive a NaN.  Otherwise, <code>value</code> will be a cell array; points located outside the polygons will hold an empty array.</p>
+
+<h2>Remarks</h2>
+
+<p>This function assumes that the geographic region covered by the polygons is small enough that the lines connecting the points can be approximated using straight lines, and that the region does not cross the poles.</p>
+
+<p>Also, this function was written to deal with shapefiles that hold only polygons that fit together to form an entire coverage area.  It should work with shapefiles that also contain non-polygon objects, but has not been tested.</p>   
+
+<h2>See Also</h2>
+
+<code>shaperead</code>
