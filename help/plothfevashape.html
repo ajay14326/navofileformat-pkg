@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>plothfevashape</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>plothfevashape</h1>
+
+<p>Plots the polygon in a HFEVA shapefile</p>
+
+<h2>Syntax</h2>
+
+<code>plothfevashape(filename)</code>
+<br><code>plothfevashape(filename, north, south, east, west)</code>
+<br><code>handles = plothfevashape(...)</code>
+
+<h2>Description</h2>
+
+<p><code>plothfevashape(filename)</code> plots the polygons in a HFEVA sediment shapefile to a mercator projection, where <code>filename</code> is either the full name or base name of the shapefile components.</p>
+
+<p><code>plothfevashape(filename, north, south, east, west)</code> sets the map boundaries to the indicated latitudes and longitudes (if not included, the bounding box of the polygons is used).</p>
+
+<p><code>handles = plothfevashape(...)</code> returns a structure holding the handles of the figure, map plot, map axis, and colorbar.</p>
+
+<h2>Examples</h2>
+
+<h2>See Also</h2>
+
+<code>shaperead</code>
+

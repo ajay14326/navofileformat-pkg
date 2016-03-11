@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>readcharterheader</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>readcharterheader</h1>
+
+<p>Reads the header of a binary charter file</p>
+
+<h2>Syntax</h2>
+
+<p><code>Data = readcharterheader(filename)</code></p>
+
+<h2>Description</h2>
+
+<code>Data = readbinarycharter(filename)</code> reads the header of <code>filename</code> into the structure <code>Data</code>. 
+
+<h2>Output Structure</h2>
+
+<table border="2" cellpadding="4" cellspacing="0">
+<tr><td><b>Field Name</b></td><td><b>Field Contents</b></td></tr>
+<tr><td><code>westLon</code></td><td>Western boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>eastLon</code></td><td>Eastern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>southLat</code></td><td>Southern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>northLat</code></td><td>Northern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>gridInterval</code></td><td>Grid interval, in minutes</td></tr>
+<tr><td><code>width</code></td><td>Width of grid (# cells)</td></tr>
+<tr><td><code>height</code></td><td>Height of grid (# cells)</td></tr>
+<tr><td><code>endianValue</code></td><td>66051</td></tr>
+<tr><td><code>minimumValue</code></td><td>Minimum value in the data grid</td></tr>
+<tr><td><code>maximumValue</code></td><td>Maximum value in the data grid</td></tr>
+</table>
+
+<h2>See Also</h2>
+
+<a href="readbinarycharter.html"><code>readbinarycharter</code></a>

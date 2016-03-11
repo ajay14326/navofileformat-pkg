@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>loadhfevashape</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>loadhfevashape</h1>
+
+<p>Loads a shapefile containing HFEVA sediment polygons</p>
+
+<h2>Syntax</h2>
+
+<code>HfevaStruct = loadhfevashape(filename)</code>
+
+<h2>Description</h2>
+
+<p><code>HfevaStruct = loadhfevashape(filename)</code> loads a N x 1 geographic data structure from a HFEVA sediment shapefile.  See <a href="hfevaTable.html"><code>hfevaTable</code></a> for information about the HFEVA sediment classification system. 
+
+<h2>Output Structure</h2>
+
+<table border="2" cellpadding="4" cellspacing="0">
+<tr><td><b>Field Name</b></td><td><b>Field Contents</b></td></tr>
+<tr><td><code>Geometry</code></td><td><code>'Polygon'</code></td></tr>
+<tr><td><code>Lon</code></td><td>vector a polygon vertex longitudes, NaN-delimited for multipart polyons</td></tr>
+<tr><td><code>Lat</code></td><td>vector a polygon vertex latitudes, NaN-delimited for multipart polyons</td></tr>
+<tr><td><code>CAT</code></td><td><code>HFEVA sediment category</code></td></tr>
+<tr><td><code>typeId</code></td><td>HFEVA type ID</td></tr>
+<tr><td><code>rmz</code></td><td>RMZ (mean grain diameter)</td></tr>
+<tr><td><code>color</code></td><td><code>[red green blue] 0-255</code></td></tr>
+<tr><td><code>patchFace, patchVertices</code></td><td>Face-vertex matrices for the polygon (for plotting purposes)</td></tr>
+<tr><td>other</td><td>Any other fields included in the original shapefile</td></tr>
+</table>
+
+<h2>See Also</h2>
+
+<code><a href="hfevaTable.html">hfevaTable</a></code>

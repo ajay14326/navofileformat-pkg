@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>hfevaColorbar</title>
+  <link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+<body>
+<h1>hfevaColorbar</h1>
+<p>Add a HFEVA colorbar to the current figure</p>
+<h2>Syntax</h2>
+<code>hfevaColorbar(positionVector, fontSize)</code>
+<br>
+<code>hfevaColorbar(positionVector, fontSize, indices)</code>
+<br>
+<code>h = hfevaColorbar(...)</code>
+<h2>Description</h2>
+<p><code>hfevaColorbar(positionVector, fontSize)</code> adds a vertical
+colorbar showing all the HFEVA sediment types, where <code>positionVector</code>
+is a vector indicating <code>[left bottom width height]</code> of the
+colorbar with respect to the current figure. Each color is labeled by
+HFEVA standard sediment type, using the font size indicated by <code>fontSize</code>.</p>
+<p><code>hfevaColorbar(positionVector, fontSize, indices)</code> adds a
+colorbar with only the sediments indicated by the vector <code>indices</code>.
+See <code>hfevaTable</code> for all available sediment types and their
+indices.</p>
+<p><code>h = hfevaColorbar(...)</code> returns the handle of the
+colorbar.
+</p>
+<h2>Remarks</h2>
+<p>This colorbar is for labeling purposes only; it has no effect on the
+colormap of any axes that may be present in the figure.
+</p>
+<h2>Example</h2>
+<code>figure('Position', [50 50 200 500], 'color', 'w');</code>
+<br>
+<code>hfevaColorbar([.1 .1 .8 .8], 8)</code>
+<br>
+<br>
+<img src="hfevaColorbar.png">
+</body>
+</html>

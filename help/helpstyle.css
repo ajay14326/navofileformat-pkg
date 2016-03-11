@@ -1,0 +1,23 @@
+<style>
+body {
+  background-color: white;
+  margin:10px;
+}
+h1 {
+  color: #990000; 
+  font-size: xx-large;
+}
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+p,h1,h2,div {
+  width: 600px;
+}
+
+code {
+  font-family: monospace;
+  font-size: medium; 
+}
+</style>

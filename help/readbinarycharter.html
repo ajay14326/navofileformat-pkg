@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>readbinarycharter</title>
+<link rel="stylesheet" href="helpstyle.css" type="text/css">
+</head>
+
+<body>
+
+<h1>readbinarycharter</h1>
+
+<p>Reads data from a binary charter file</p>
+
+<h2>Syntax</h2>
+
+<p><code>Data = readbinarycharter(filename)</code></p>
+
+<h2>Description</h2>
+
+<code>Data = readbinarycharter(filename)</code> reads the data in <code>filename</code> into a the structure <code>Data</code>.  A binary charter file is used to store gridded datasets at the Naval Oceanographic Office.</p>  
+
+<h2>Output Structure</h2>
+
+<table border="2" cellpadding="4" cellspacing="0">
+<tr><td><b>Field Name</b></td><td><b>Field Contents</b></td></tr>
+<tr><td><code>westLon</code></td><td>Western boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>eastLon</code></td><td>Eastern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>southLat</code></td><td>Southern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>northLat</code></td><td>Northern boundary of data grid, in decimal degrees</td></tr>
+<tr><td><code>gridInterval</code></td><td>Grid interval, in minutes</td></tr>
+<tr><td><code>width</code></td><td>Width of grid (# cells)</td></tr>
+<tr><td><code>height</code></td><td>Height of grid (# cells)</td></tr>
+<tr><td><code>endianValue</code></td><td>66051</td></tr>
+<tr><td><code>minimumValue</code></td><td>Minimum value in the data grid</td></tr>
+<tr><td><code>maximumValue</code></td><td>Maximum value in the data grid</td></tr>
+<tr><td><code>dataGrid</code></td><td>Grid of values, with the southernmost data in row 1 (top) and the westernmost data in column 1 (left)</td></tr>
+</table>
+
+<h2>See Also</h2>
+
+<a href="readcharterheader.html"><code>readcharterheader</code></a>
